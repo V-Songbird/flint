@@ -1,6 +1,6 @@
 <div align="center">
   <h1>flint</h1>
-  <p><strong>Two text files that make Claude Code write less and talk less. Nothing to install.</strong></p>
+  <p><strong>Plain text files that make Claude Code write less and talk less. Nothing to install.</strong></p>
 </div>
 
 <p align="center">
@@ -51,7 +51,16 @@ One test batch, two runs per job. Promising, not settled.
 
 The file above says report once, at the end. It does not say what that report sounds like.
 
-For that, Claude Code has a setting called an output style. Copy [hush](https://github.com/V-Songbird/hush)'s style file to `.claude/output-styles/hush.md` in your project, then add this to `.claude/settings.json`:
+For that, Claude Code has a setting called an output style: a file that says how Claude should sound. **[`output-styles/hush.md`](output-styles/hush.md)** is one, and it is the one used in the test above.
+
+Copy it into your project and switch it on:
+
+```bash
+mkdir -p your-project/.claude/output-styles
+cp output-styles/hush.md your-project/.claude/output-styles/
+```
+
+Then add this to `.claude/settings.json` in your project:
 
 ```json
 {
@@ -84,7 +93,7 @@ Then install whichever you want.
 | Plugin | What it adds beyond the text |
 |---|---|
 | **[razor](https://github.com/V-Songbird/razor)** | Stops the actual moment a package gets added and asks once, with your existing packages in the message. Counts what a session added. |
-| **[hush](https://github.com/V-Songbird/hush)** | Trims long command output and logs before they fill the session. This is the part a text file genuinely cannot do. |
+| **[hush](https://github.com/V-Songbird/hush)** | Trims long command output and logs before they fill the session. This is the part a text file genuinely cannot do. It is also where the output style here comes from. |
 | **[foreman](https://github.com/V-Songbird/foreman)** | Keeps a to-do list in your repo, picks what to work on next, and says why that one came first. |
 
 ## Why "flint"
@@ -95,4 +104,4 @@ Flint is the stone you strike to start a fire. These files are what you strike t
 
 MIT. See [LICENSE](LICENSE).
 
-The rules in the fragment come from razor and hush, both MIT, both by the same author.
+The rules in the fragment, and the output style, come from razor and hush. Both are MIT, both by the same author, and both are copied here unchanged apart from one line that only applies inside a plugin.
