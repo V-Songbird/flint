@@ -46,13 +46,11 @@ Pick **Hush** from the list. That is it.
 
 ### 2. Make it write less code
 
-Claude also reads a file called `CLAUDE.md` in your project and treats it as standing instructions. **[`fragments/razor-hush.md`](fragments/razor-hush.md)** tells it to check whether the code is needed at all, and to reuse what your project already has, before writing anything new.
+Claude reads a file called `CLAUDE.md` in your project every time it starts, and follows whatever is in it. **[`fragments/razor-hush.md`](fragments/razor-hush.md)** tells it to check whether the code is needed at all, and to reuse what your project already has, before writing anything new.
 
-```bash
-cat fragments/razor-hush.md >> your-project/CLAUDE.md
-```
+Open `CLAUDE.md` in your project and paste the fragment at the bottom. If there is no `CLAUDE.md`, make one and paste it in there.
 
-If your project has no `CLAUDE.md` yet, that command makes one.
+That file stays with the project, so anyone who works on it gets the same rules.
 
 ## Does it work?
 
@@ -64,9 +62,7 @@ If your project has no `CLAUDE.md` yet, that command makes one.
 | Its own built-in `Concise` style | 386 | 23 words |
 | **With both files** | **49** | **4 words** |
 
-`Concise` cuts the reply by 6%. These two files cut it by 88%, on the same jobs, with the same answers.
-
-23 of the 24 got the right answer. The one miss was flint: it put the detail in a file and left the summary too short for the marker, which reads the reply. Right work, wrong place.
+`Concise` cuts the reply by 6%. These two files cut it by 88%, on the same jobs.
 
 Three honest caveats.
 
