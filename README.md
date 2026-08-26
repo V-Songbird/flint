@@ -22,24 +22,27 @@ That is the real cost. Not the wall of text — the fact that you stop being abl
 
 ## The fix
 
-Two plain text files. Copy them into your project.
+Two plain text files. One goes in your home folder, one in your project.
+
+### Let Claude do it
+
+If you would rather not copy files around, paste [`prompts/install.md`](prompts/install.md) into Claude Code and it sets itself up. It fetches both files, puts each where it belongs, and asks first if something is already there.
+
+Prefer to do it yourself? The two steps are below.
 
 ### 1. Make it write like a person
 
-Claude Code has a setting called an output style: a file that says how it should sound. **[`output-styles/hush.md`](output-styles/hush.md)** is one. Short sentences. Everyday words. One report at the end, not a running commentary.
+Claude Code lets you hand it a file that says how to sound. **[`output-styles/hush.md`](output-styles/hush.md)** is one. Short sentences. Everyday words. One report at the end, not a running commentary.
 
-```bash
-mkdir -p your-project/.claude/output-styles
-cp output-styles/hush.md your-project/.claude/output-styles/
+**Put the file where Claude looks.** Inside your home folder there is a folder called `.claude`. Drop `hush.md` into `.claude/output-styles/`, making that folder if it is not there yet. Claude now finds it in every project.
+
+**Turn it on.** Open Claude Code and type:
+
+```
+/output-style
 ```
 
-Then create or edit `.claude/settings.json` in your project:
-
-```json
-{
-  "outputStyle": "Hush"
-}
-```
+Pick **Hush** from the list. That is it.
 
 ### 2. Make it write less code
 
