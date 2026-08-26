@@ -76,9 +76,9 @@ Two batches, two runs per job. Promising, not settled.
 
 **[`prompts/tune-for-opus5.md`](prompts/tune-for-opus5.md)** is not a file to install. It is a message you paste into a Claude Code chat, in any project.
 
-It reads every instruction file you have, finds the rules too vague to act on or pointing at files that no longer exist, and rewrites them. You see each change before it lands, and you can undo any of it.
+It finds every instruction file the project loads, grades each rule on whether Claude can tell when to act on it, and rewrites the weak ones. It also checks that every path and command a rule names still exists. You see each change before it lands, and it hands you the git command that puts everything back.
 
-The grading is done by a plugin called `assay`, so you need that one installed for this prompt to run.
+Nothing to install for this either. Claude does the whole thing with the tools it already has.
 
 ## Go one level beyond this
 
