@@ -1,6 +1,6 @@
 <div align="center">
   <h1>flint</h1>
-  <p><strong>Two files you drop into a project so a fresh Claude session starts sharp — no plugins, no setup.</strong></p>
+  <p><strong>Two text files that make Claude Code write less and talk less. Nothing to install.</strong></p>
 </div>
 
 <p align="center">
@@ -8,36 +8,50 @@
     <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-E5582B" alt="Claude Code"/></a>
 </p>
 
-> **TL;DR** — Claude writes more code than you asked for, and narrates while it works. Copy one file into your project and it stops doing both. The second file is a prompt that tidies up the instructions you already have. Nothing to install.
+> **TL;DR** — Ask Claude Code for one small thing and you often get a new library, extra files, and a running commentary you did not need. Paste one file into your project and it stops. Copy, paste, done.
 
 ---
 
-## What is this?
+## The problem
 
-A fresh Claude Code session on a new machine has no plugins. It adds libraries you did not need, and it talks you through every step on the way.
+Claude Code is the assistant that edits files in your project from the terminal.
 
-flint is two plain text files that fix that with nothing but a copy and paste.
+Left alone it adds. A helper you did not ask for, a package to do three lines of work, a folder for a future that never arrives. All of it is now yours to read and maintain.
 
-| File | What it does |
-|---|---|
-| [`fragments/razor-hush.md`](fragments/razor-hush.md) | Paste into your `CLAUDE.md`. Claude cuts before it adds, and it reports once at the end instead of narrating. |
-| [`prompts/tune-for-opus5.md`](prompts/tune-for-opus5.md) | Paste into a chat. Claude audits the instruction files you already have and rewrites the weak ones. |
+It also narrates. Paragraphs of "now I'll check the config" between every step, and a wall of summary at the end.
 
-## Install
+## The fix
 
-Copy the fragment into your project's `CLAUDE.md`. That is the whole install.
+Claude reads a file called `CLAUDE.md` in your project, every session, and treats it as standing instructions.
+
+flint gives you one to paste in.
 
 ```bash
-cat fragments/razor-hush.md >> /path/to/your/project/CLAUDE.md
+cat fragments/razor-hush.md >> your-project/CLAUDE.md
 ```
 
-If the project has no `CLAUDE.md`, the file becomes it.
+If your project has no `CLAUDE.md` yet, that command makes one. That is the whole install.
 
-## The second half is optional
+**[`fragments/razor-hush.md`](fragments/razor-hush.md)** tells Claude two things. Check whether the code is needed at all before writing it, and reuse what the project already has. Then stay quiet while working and give you one short report at the end.
 
-The fragment says to report once, at the end, in short plain sentences. It does not say what those sentences sound like.
+## Does it work?
 
-For that you want an output style. Copy [hush](https://github.com/V-Songbird/hush)'s style file into `.claude/output-styles/hush.md` in your project, then set it in `.claude/settings.json`:
+24 sessions were run head to head on Claude Opus 5. Four real jobs, two runs each, three setups. Every single one got the right answer.
+
+| Setup | Cost per job | Words written | Chatter while working |
+|---|---|---|---|
+| Claude Code on its own | $0.66 | 8,798 | 47 words |
+| This file | $0.45 | 3,626 | 4 words |
+
+One catch. A text file cannot reach into build and test output, so long command output still goes through untrimmed. On the noisiest jobs that traffic rose 10 to 19%.
+
+One test batch, two runs per job. Promising, not settled.
+
+## Make the reports nicer to read
+
+The file above says report once, at the end. It does not say what that report sounds like.
+
+For that, Claude Code has a setting called an output style. Copy [hush](https://github.com/V-Songbird/hush)'s style file to `.claude/output-styles/hush.md` in your project, then add this to `.claude/settings.json`:
 
 ```json
 {
@@ -45,38 +59,40 @@ For that you want an output style. Copy [hush](https://github.com/V-Songbird/hus
 }
 ```
 
-Without it the fragment still works. Claude just writes in its own voice.
+Now the report comes back in short plain sentences. Skip this and everything still works — Claude just writes in its own voice.
 
-## What it measured
+## Tidy up the rules you already have
 
-24 headless sessions on Claude Opus 5, high effort. Four jobs, two runs each, three setups.
+**[`prompts/tune-for-opus5.md`](prompts/tune-for-opus5.md)** is not a file to install. It is a message you paste into a Claude Code chat, in any project.
 
-| Setup | Cost per job | Words written | Chatter while working |
-|---|---|---|---|
-| Plain Claude | $0.66 | 8,798 | 47 words |
-| The hush plugin | $0.64 | 6,528 | 6 words |
-| This fragment | $0.45 | 3,626 | 4 words |
+It reads every instruction file you have, finds the rules that are too vague to act on or point at files that no longer exist, and rewrites them. You see each change before it lands, and you can undo any of it.
 
-Every one of the 24 got the right answer.
+The grading is done by a plugin called `assay`, so you need that one installed for this prompt to run.
 
-One catch. The fragment is text only, so nothing trims long build and test output. That traffic went up 10 to 19% on the noisy jobs. The plugins have a hook for that; a file cannot.
+## Go one level beyond this
 
-One batch, two runs per job. Promising, not settled.
+flint is text. It cannot watch what Claude does or step in mid-task. Plugins can.
 
-## Tuning the instructions you already have
+These three are the full versions of the ideas in this repo. Add the collection once:
 
-[`prompts/tune-for-opus5.md`](prompts/tune-for-opus5.md) is a prompt, not a file to install. Paste it into a session in any repository.
+```
+/plugin marketplace add V-Songbird/foundry
+```
 
-It grades every rule and every skill description in the project, rewrites the ones that name no clear moment to act, repoints the ones naming files that are gone, and builds a real check for the duties a script can do better than a sentence. Every change is previewed first, and every change can be undone.
+Then install whichever you want.
 
-It needs the [assay](https://github.com/V-Songbird/assay) plugin installed to do the grading.
+| Plugin | What it adds beyond the text |
+|---|---|
+| **[razor](https://github.com/V-Songbird/razor)** | Stops the actual moment a package gets added and asks once, with your existing packages in the message. Counts what a session added. |
+| **[hush](https://github.com/V-Songbird/hush)** | Trims long command output and logs before they fill the session. This is the part a text file genuinely cannot do. |
+| **[foreman](https://github.com/V-Songbird/foreman)** | Keeps a to-do list in your repo, picks what to work on next, and says why that one came first. |
 
 ## Why "flint"
 
-It is what you strike to start a fire. These files are what you strike to start a session.
+Flint is the stone you strike to start a fire. These files are what you strike to start a session.
 
 ## License
 
 MIT. See [LICENSE](LICENSE).
 
-The fragment's rules come from [razor](https://github.com/V-Songbird/razor) and [hush](https://github.com/V-Songbird/hush), both MIT, both by the same author.
+The rules in the fragment come from razor and hush, both MIT, both by the same author.
