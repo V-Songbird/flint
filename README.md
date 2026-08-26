@@ -8,7 +8,7 @@
     <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-E5582B" alt="Claude Code"/></a>
 </p>
 
-> **TL;DR** — Claude Code answers a small question with 600 words of invented jargon, and you still cannot tell what it did. Copy two text files into your project and the same answer comes back in 49 plain words. Nothing to install.
+> **TL;DR** — Claude Code answers a small question with 400 words of invented jargon, and you still cannot tell what it did. Its own "Concise" setting barely dents that. Copy two text files into your project and the same answer comes back in 49 plain words. Nothing to install.
 
 ---
 
@@ -53,18 +53,25 @@ If your project has no `CLAUDE.md` yet, that command makes one.
 
 ## Does it work?
 
-24 sessions on Claude Opus 5, high effort. Four real jobs, two runs each. Every single one got the right answer.
+24 sessions on Claude Opus 5, high effort. Four real jobs, two runs each, three setups, all run together so the numbers compare.
 
-| Setup | Words in the reply | Chatter while working | Cost per job |
-|---|---|---|---|
-| Claude Code on its own | 594 | 47 words | $0.66 |
-| With both files | **49** | 4 words | $0.45 |
+| Setup | Words in the reply | Chatter while working |
+|---|---|---|
+| Claude Code on its own | 411 | 25 words |
+| Its own built-in `Concise` style | 386 | 23 words |
+| **With both files** | **49** | **4 words** |
 
-Same jobs. Same right answers. A twelfth of the reading.
+`Concise` cuts the reply by 6%. These two files cut it by 88%, on the same jobs, with the same answers.
 
-One catch. Text files cannot reach into build and test output, so long command output still goes through untrimmed. On the noisiest jobs that traffic rose 10 to 19%.
+23 of the 24 got the right answer. The one miss was flint: it put the detail in a file and left the summary too short for the marker, which reads the reply. Right work, wrong place.
 
-One test batch, two runs per job. Promising, not settled.
+Three honest caveats.
+
+Cost did not move either way. One batch had flint 32% cheaper, a second had it 12% dearer. Treat it as a wash.
+
+Text files cannot reach into build and test output, so long command output still goes through untrimmed.
+
+Two batches, two runs per job. Promising, not settled.
 
 ## Tidy up the rules you already have
 
