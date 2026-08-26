@@ -8,7 +8,7 @@
     <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-E5582B" alt="Claude Code"/></a>
 </p>
 
-> **TL;DR** — Claude Code answers a small question with 400 words of invented jargon, and you still cannot tell what it did. Its own "Concise" setting barely dents that. Copy two text files into your project and the same answer comes back in 49 plain words. Nothing to install.
+> **TL;DR** — Claude Code answers a small question with 400 words of invented jargon, and you still cannot tell what it did. Its own "Concise" setting barely dents that. Drop two text files in place and the same answer comes back in 49 plain words. Claude will even do it for you. Nothing to install.
 
 ---
 
