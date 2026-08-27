@@ -10,13 +10,19 @@ First, find what actually gets loaded. Look for all of these, and report which e
 - every `.claude/agents/*.md`, same
 - `.claude/settings.json` and any hooks it wires
 
-Read each one in full. Then tell me in a few lines what you found: how many files, how many separate rules, and anything that surprised you — a file nothing loads, a rule written for a different model, a duty a wired hook already enforces.
+Read each one in full. Then tell me in a few lines what you found: how many files, how many separate rules, roughly how many words load into every single session, and anything that surprised you — a file nothing loads, a rule written for a different model, a duty a wired hook already enforces.
+
+Before grading anything, throw out what is not a rule. Instruction files collect things that only look like instructions: a note about a decision someone made last quarter, an example, a description of what the project does, a lesson learned. If Claude wrote it about the project rather than you writing it for Claude, it is a note, not an instruction. Say which lines you set aside and why, in a few words each. Grading narration as if it were a mandate is the fastest way to waste both our time.
 
 Now grade every rule. A rule is one instruction: a sentence or bullet that asks for something. Judge each against three questions, and say which ones it fails.
 
 Does it name a moment Claude can recognize? "When you change a file under `src/`" is a moment. "Keep things tidy" is not, and neither is "when possible". A rule with no moment is not followed late — it is not followed at all.
 
-Does it name an action with an artifact? "Add a line to `CHANGELOG.md` under Unreleased" is an action. "Be careful about documentation" is not.
+Does it ask for anything at all? A rule needs an instruction verb — add, run, use, never, always. A line that reads as a description of how things are is not a rule even when it sounds like policy. "CHANGELOG entries are short and user-facing" describes a state of affairs. "Keep each `CHANGELOG.md` entry under 3 lines, written for the user" asks for something. Hedges do the same damage from the other side: "try to", "where possible", "prefer when you can" leave the model free to decide it was not possible.
+
+Does it name something concrete? A path, a command, an identifier, a number with a unit. The words to be suspicious of are the ones that leave the standard to the reader: clean, proper, appropriate, reasonable, careful, maintainable. "Write clean, maintainable code" cannot be acted on. "Keep functions under 40 lines; extract a helper rather than nesting a third `if`" can. Quote the vague words back to me when they are the reason a rule fails.
+
+Not every rule needs a path. Some need a threshold, some need one worked example, and a few genuinely need judgment — those last ones are fine as they are, and I would rather you say so than invent a number for them.
 
 Does it only forbid? A rule that says never do X, with no alternative and no escape hatch, can stall a whole session when the task genuinely needs X. Pair it with what to do instead, or with "stop and ask me".
 
@@ -39,6 +45,10 @@ Before: "Keep the changelog updated." No moment, no artifact, so it gets skipped
 Apply the ones I approve, one file at a time. When a rule needs to move to a scoped file, moving it is a change like any other — show me the new file, its scope pattern, and the line as it will read once the scope carries the when-clause.
 
 Two kinds of finding you must report and must not fix yourself. Where two rules disagree, name both sides and leave the choice to me. Where a duty is genuinely mechanical — a command that must run, a path that must never be edited, a file that must stay in step with another — say so and describe the hook or script that would do it, but do not write it unless I ask. Prose a machine could enforce is worth flagging, not worth replacing on your own initiative.
+
+Run that question in both directions. Tell me which rules need real judgment and are right to stay prose, so I know the list you are not proposing to automate is deliberate rather than overlooked.
+
+And if a hook wired in this project already does what a rule asks, on the same trigger, say so and leave that rule alone. Rewording prose that a machine is already enforcing changes nothing.
 
 Never delete or deactivate a rule. If you believe one is obsolete, that is a finding to report, not a change to make.
 
