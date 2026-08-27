@@ -88,7 +88,7 @@ Nothing to install for this either. Claude does the whole thing with the tools i
 
 flint is text. It cannot watch what Claude does or step in mid-task. Plugins can.
 
-These three are the full versions of the ideas here. Add the collection once:
+These two are the full versions of the ideas here. Add the collection once:
 
 ```
 /plugin marketplace add V-Songbird/foundry
@@ -100,7 +100,6 @@ Then install whichever you want.
 |---|---|
 | **[hush](https://github.com/V-Songbird/hush)** | Trims long command output and logs before they fill the session, and nudges the quiet back when a session slips. This is the part a text file genuinely cannot do. The style here comes from it. |
 | **[razor](https://github.com/V-Songbird/razor)** | Stops the actual moment a package gets added and asks once, with your existing packages in the message. Counts what a session added. |
-| **[foreman](https://github.com/V-Songbird/foreman)** | Keeps a to-do list in your repo, picks what to work on next, and says why that one came first. |
 
 ## Why "flint"
 
