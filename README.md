@@ -1,4 +1,8 @@
 <div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg" />
+    <img src="assets/logo.svg" alt="flint" width="200" />
+  </picture>
   <h1>flint</h1>
   <p><strong>Make Claude Code answer in plain words you can actually read.</strong></p>
 </div>
