@@ -20,15 +20,23 @@ Does it name an action with an artifact? "Add a line to `CHANGELOG.md` under Unr
 
 Does it only forbid? A rule that says never do X, with no alternative and no escape hatch, can stall a whole session when the task genuinely needs X. Pair it with what to do instead, or with "stop and ask me".
 
+Now check where each rule lives, which matters as much as how it is written.
+
+`CLAUDE.md` is loaded into every single session in this project, whether the rule applies or not. That is what it is for: things that are true of all work here. A rule that only applies to some of the code does not belong in it. "When editing TypeScript files, prefer named exports" is paying for itself in every Python session, every documentation session, every session that never opens a `.ts` file. Move that rule into its own file under `.claude/rules/`, scoped to the files it is about, and it loses the when-clause because the scope now says it: "Use named exports."
+
+So for each rule, tell me which of these it is. It genuinely applies to all work here, so `CLAUDE.md` is right. Or it applies to one language, one folder, or one kind of file, so it belongs in a scoped rules file — and name the pattern it should be scoped to.
+
+Two more placement problems to look for, and both are worse than any wording problem because the rule never reaches the model at all. A rules file scoped to a pattern that matches nothing in this repository. And a file shadowed by another one, or sitting past a read limit, so the host skips it.
+
 Then check three mechanical things that have nothing to do with wording. A rule pointing at a file, function, or command that no longer exists — verify each path and each command for real, do not assume. Two rules asking for the same thing in different words. Two rules that contradict each other.
 
-Report all of that before changing anything. Order it worst first, and put the mechanical problems above the wording ones: a rule aimed at a file that is gone is broken for every model, while wording strength is a matter of degree.
+Report all of that before changing anything. Order it worst first, in this order: rules the host never loads, then rules pointing at things that are gone, then rules in the wrong file, then contradictions and duplicates, then wording. A rule that never loads is broken for every model. Wording strength is a matter of degree, and it is the part I am least sure transfers to Opus 5.
 
 Then, for the wording problems only, show me each rewrite before you make it. Old line, new line, one sentence on what changed. Sharpen how a rule asks; never change what it asks for. Here is the shape:
 
 Before: "Keep the changelog updated." No moment, no artifact, so it gets skipped entirely. After: "When you change any file under `src/`, add a line to `CHANGELOG.md` under Unreleased in the same commit."
 
-Apply the ones I approve, one file at a time.
+Apply the ones I approve, one file at a time. When a rule needs to move to a scoped file, moving it is a change like any other — show me the new file, its scope pattern, and the line as it will read once the scope carries the when-clause.
 
 Two kinds of finding you must report and must not fix yourself. Where two rules disagree, name both sides and leave the choice to me. Where a duty is genuinely mechanical — a command that must run, a path that must never be edited, a file that must stay in step with another — say so and describe the hook or script that would do it, but do not write it unless I ask. Prose a machine could enforce is worth flagging, not worth replacing on your own initiative.
 
