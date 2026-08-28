@@ -24,6 +24,49 @@ You ask one thing. Back comes a wall of text. Words it made up on the spot. A ca
 
 That is the real cost. Not the wall of text. You stop being able to check the work.
 
+## What the difference looks like
+
+Here is one real job. Four questions about a gateway outage. The last one was this:
+
+> Write me the on-call handoff: root cause, the impact window, and which deploy to roll back.
+
+**Plain Claude Code wrote 1155 words.** That is 115 lines. Ten headings, three tables, two blocks of code:
+
+```
+# On-Call Handoff — Gateway 503s
+## TL;DR
+## Root cause
+## Impact window
+## Roll back: dep-4471
+## Timeline
+## Ruled out
+## Watch out — two red herrings
+## Open items after rollback
+## Data caveats
+```
+
+None of it is wrong. It is a document. Pasted into a chat window. At four in the morning. Somebody asked one question. And the last line was this:
+
+> Want me to save this as a markdown file in the working directory?
+
+After 1155 words, it had not acted.
+
+**With the two files, 52 words.** Not one word of chatter while it worked.
+
+> **Handoff written to `INCIDENT-2026-03-14-gateway-503.md`.**
+>
+> Root cause is `gateway.pool.perRequest: false -> true`. Every request grabs its own connection from a pool of 20. It empties and never refills.
+>
+> Impact ran `02:14:18.972Z` to log end `03:59:27.974Z`. That is 1h 45m, 530 of 636 requests failed, 83%. Still broken.
+>
+> Roll back `dep-4471`, gateway, by `a.novak`.
+
+In the real reply that name is a link. You can click it.
+
+It wrote the file. Then it said where. The cause is there. So is the window. So is the deploy to roll back. The long version's detail is not lost either. It is in the file. Ready when you want it.
+
+Both runs got the right answer. A script checks that. Mangle the facts and the run fails.
+
 ## The fix
 
 Two plain text files. One goes in your home folder. One goes in your project.
