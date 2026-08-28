@@ -12,6 +12,14 @@
     <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/Claude_Code-E5582B" alt="Claude Code"/></a>
 </p>
 
+<p align="center">
+    <a href="#the-fix"><strong>Install it</strong></a> &nbsp;·&nbsp;
+    <a href="#what-the-difference-looks-like">See the difference</a> &nbsp;·&nbsp;
+    <a href="#does-it-work">The numbers</a> &nbsp;·&nbsp;
+    <a href="#the-style-was-rewritten">What changed</a> &nbsp;·&nbsp;
+    <a href="#tidy-up-the-rules-you-already-have">Fix your own rules</a>
+</p>
+
 > **TL;DR** — Ask Claude Code a small question. Back come 500 words of invented jargon. You still cannot tell what it did. Its own `Concise` setting cuts that by a third. You are no wiser. Drop two text files in place. The same answer comes back in 75 plain words. Claude will even do it for you. Nothing to install.
 
 ---
