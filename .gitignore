@@ -1,4 +1,23 @@
-.DS_Store
-Thumbs.db
+# flint repository visibility and local generated files.
+# Keep the two text files, the prompts and public documentation visible.
+
+# Private working material and documentation
+.private/
+docs/tasks/
+docs/decisions/
+docs/knowledge/private/
+docs/apis/private/
+
+# Machine-local agent state; shared instructions stay visible
+**/.claude/settings.local.json
+**/.claude/memory/
+CLAUDE.local.md
+AGENTS.override.md
+
+# Plugin-local session state written at run time, never published
 .assay-tmp/
 .assay/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db

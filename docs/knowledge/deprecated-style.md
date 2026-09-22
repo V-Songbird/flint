@@ -1,9 +1,18 @@
+---
+type: knowledge
+summary: "Why flint's writing style was rewritten, what changed between the older and the current voice, the numbers the older one earned and how to keep using it; read before touching output-styles/hush-deprecated.md."
+related_files:
+  - output-styles/hush.md
+  - output-styles/hush-deprecated.md
+  - prompts/install.md
+---
+
 # The older Hush voice
 
 flint ships two versions of the writing style. The current one is
-[`output-styles/hush.md`](output-styles/hush.md), and it is the one the
-[README](README.md) walks you through. This page is about the other one,
-[`output-styles/hush-deprecated.md`](output-styles/hush-deprecated.md).
+[`output-styles/hush.md`](../../output-styles/hush.md), and it is the one the
+[README](../../README.md) walks you through. This page is about the other one,
+[`output-styles/hush-deprecated.md`](../../output-styles/hush-deprecated.md).
 
 It still works. Nothing about it broke. If you had it and you liked it, you can
 keep it, and this page tells you how.
@@ -65,7 +74,7 @@ way.
 
 Same as the current one, with a different filename.
 
-Save [`output-styles/hush-deprecated.md`](output-styles/hush-deprecated.md) into
+Save [`output-styles/hush-deprecated.md`](../../output-styles/hush-deprecated.md) into
 the `.claude/output-styles/` folder inside your home folder, making that folder
 if it is not there yet. Then open Claude Code and type:
 
@@ -78,5 +87,5 @@ Pick **Hush (deprecated)** from the list.
 You can keep both files side by side. They show up as two entries and you switch
 between them whenever you want.
 
-The paste-in installer at [`prompts/install.md`](prompts/install.md) only fetches
+The paste-in installer at [`prompts/install.md`](../../prompts/install.md) only fetches
 the current style. Getting this one is the copy above.

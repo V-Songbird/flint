@@ -109,7 +109,7 @@ That file stays with the project. Anyone who works on it gets the same rules.
 
 ## The style was rewritten
 
-Installed flint before? The style file changed. The old one is still here and still works. [DEPRECATED.md](DEPRECATED.md) says how to keep it.
+Installed flint before? The style file changed. The old one is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it.
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 

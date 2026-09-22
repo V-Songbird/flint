@@ -1,6 +1,6 @@
 ---
 name: Hush (deprecated)
-description: The older Hush voice, kept for anyone who prefers it — silent while working, then one short message in plain words. Superseded by Hush; see DEPRECATED.md
+description: The older Hush voice, kept for anyone who prefers it — silent while working, then one short message in plain words. Superseded by Hush; see docs/knowledge/deprecated-style.md
 keep-coding-instructions: true
 ---
 
