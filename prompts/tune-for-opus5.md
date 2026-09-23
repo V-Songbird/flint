@@ -1,4 +1,4 @@
-You are a senior engineer tuning this project's Claude Code instruction files so that Claude Opus 5 follows them reliably. You have no memory of any earlier conversation. Everything you need is below or in the repository you are sitting in. Use nothing but the tools you already have.
+You are a senior engineer tuning this project's Claude Code instruction files so that Claude Opus 5 and Opus 5.5 follow them reliably. You have no memory of any earlier conversation. Everything you need is below or in the repository you are sitting in. Use nothing but the tools you already have.
 
 Before you touch a file, make sure my work is safe. If this is a git repository with uncommitted changes, say so and stop until I answer. If it is clean, note the current commit so I can get back to it, and give me that command at the end.
 
@@ -26,6 +26,10 @@ Not every rule needs a path. Some need a threshold, some need one worked example
 
 Does it only forbid? A rule that says never do X, with no alternative and no escape hatch, can stall a whole session when the task genuinely needs X. Pair it with what to do instead, or with "stop and ask me".
 
+Does it tell Claude to think harder? Lines like "think carefully", "think step by step" or "take your time and reason it through" were written for models that needed the push. Opus 5.5 always thinks, decides for itself how much, and takes its cue from the effort setting, not from a line in a file. Anthropic found that removing such a line made replies start sooner with no clear loss of quality. Quote each one back to me and propose deleting it. If I want more thinking somewhere, the effort setting is where to ask for it.
+
+Does it ask Claude to show its reasoning? "Explain your thinking step by step" and "show your work" ask for the model's private reasoning written out in the reply. Opus 5.5 does that thinking on its own, and it can decline a request to copy it into the reply. What the reader needs is the reason behind the result, so reword the rule to ask for that. Before: "Show your reasoning for every change." After: "After each change, say in one sentence why you made it."
+
 Now check where each rule lives, which matters as much as how it is written.
 
 `CLAUDE.md` is loaded into every single session in this project, whether the rule applies or not. That is what it is for: things that are true of all work here. A rule that only applies to some of the code does not belong in it. "When editing TypeScript files, prefer named exports" is paying for itself in every Python session, every documentation session, every session that never opens a `.ts` file. Move that rule into its own file under `.claude/rules/`, scoped to the files it is about, and it loses the when-clause because the scope now says it: "Use named exports."
@@ -33,6 +37,8 @@ Now check where each rule lives, which matters as much as how it is written.
 So for each rule, tell me which of these it is. It genuinely applies to all work here, so `CLAUDE.md` is right. Or it applies to one language, one folder, or one kind of file, so it belongs in a scoped rules file — and name the pattern it should be scoped to.
 
 Two more placement problems to look for, and both are worse than any wording problem because the rule never reaches the model at all. A rules file scoped to a pattern that matches nothing in this repository. And a file shadowed by another one, or sitting past a read limit, so the host skips it.
+
+Then look for one rule by its absence. Opus 5.5 keeps working through long tasks and reports as it goes. With nothing in these files about when to stop, it can end a turn at a natural pause just to report, or keep going where I wanted to be asked. If no rule says which, propose one, worded for this project. Name the stops I do not want, such as a summary that only announces the next step, or an offer to carry on unless I object. Name the stops I do want: when nothing can move without my answer, and before anything destructive or hard to undo. Show it to me as a new rule, with the file it belongs in, like any other change.
 
 Then check three mechanical things that have nothing to do with wording. A rule pointing at a file, function, or command that no longer exists — verify each path and each command for real, do not assume. Two rules asking for the same thing in different words. Two rules that contradict each other.
 
@@ -50,7 +56,7 @@ Run that question in both directions. Tell me which rules need real judgment and
 
 And if a hook wired in this project already does what a rule asks, on the same trigger, say so and leave that rule alone. Rewording prose that a machine is already enforcing changes nothing.
 
-Never delete or deactivate a rule. If you believe one is obsolete, that is a finding to report, not a change to make.
+Never delete or deactivate a rule, except a think-harder line I have approved removing. If you believe any other rule is obsolete, that is a finding to report, not a change to make.
 
 Skill and agent descriptions get the same treatment as rules, judged differently. A description is the only thing that decides whether Claude reaches for that skill at all. It must say when to use it, in the words someone would actually type, and when not to. A description that reads as a summary of what the skill does will never fire.
 

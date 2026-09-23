@@ -143,7 +143,7 @@ Two runs per job, on one batch. Promising, not settled. An earlier batch on thes
 
 **[`prompts/tune-for-opus5.md`](prompts/tune-for-opus5.md)** is not a file to install. It is a message you paste into a Claude Code chat. Any project will do.
 
-It finds every instruction file the project loads. It grades each rule on one thing. Can Claude tell when to act on it? Then it rewrites the weak ones. It also checks every path and command a rule names. You see each change before it lands. It hands you the git command that undoes the lot.
+It finds every instruction file the project loads. It grades each rule on one thing. Can Claude tell when to act on it? Then it rewrites the weak ones. It also checks every path and command a rule names. It flags lines written for older models: asking Claude to think harder, or to write out its reasoning. If no rule says when to keep going and when to stop and ask, it proposes one. You see each change before it lands. It hands you the git command that undoes the lot.
 
 Nothing to install for this either. Claude does it all with the tools it has.
 
