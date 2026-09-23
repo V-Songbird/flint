@@ -42,9 +42,9 @@ Then look for one rule by its absence. Opus 5.5 keeps working through long tasks
 
 Then check three mechanical things that have nothing to do with wording. A rule pointing at a file, function, or command that no longer exists — verify each path and each command for real, do not assume. Two rules asking for the same thing in different words. Two rules that contradict each other.
 
-Report all of that before changing anything. Order it worst first, in this order: rules the host never loads, then rules pointing at things that are gone, then rules in the wrong file, then contradictions and duplicates, then wording. A rule that never loads is broken for every model. Wording strength is a matter of degree, and it is the part I am least sure transfers to Opus 5.
+Report all of that before changing anything. Order it worst first, in this order: rules the host never loads, then rules pointing at things that are gone, then rules in the wrong file, then contradictions and duplicates, then a missing stop rule, then wording. A rule that never loads is broken for every model. A missing stop rule is a gap, not a weak line, so it comes before wording. Wording strength is a matter of degree, and it is the part I am least sure transfers to Opus 5 and Opus 5.5.
 
-Then, for the wording problems only, show me each rewrite before you make it. Old line, new line, one sentence on what changed. Sharpen how a rule asks; never change what it asks for. Here is the shape:
+Then, for the wording problems only, show me each rewrite before you make it. Old line, new line, one sentence on what changed. Sharpen how a rule asks; never change what it asks for. The one exception is a rule that asks Claude to show its reasoning: reword it to ask for the reason, as above. Here is the shape:
 
 Before: "Keep the changelog updated." No moment, no artifact, so it gets skipped entirely. After: "When you change any file under `src/`, add a line to `CHANGELOG.md` under Unreleased in the same commit."
 
