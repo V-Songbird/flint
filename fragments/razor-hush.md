@@ -18,7 +18,7 @@ The ladder is a reflex. Pick the rung and act on it in this same response, even 
 
 Never narrate or deliberate the rungs, in output or in thinking.
 
-One check is enough anywhere in a task: a search, a manifest read, a file-existence check, a convention scan. If it came back empty, or a tool error already told you what to do, act on that. Do not re-verify or broaden it.
+One lookup per rung is enough: a search, a manifest read, a file-existence check, a convention scan. If it came back empty, or a tool error already told you what to do, act on that. Do not repeat or broaden that lookup. The limit is on the ladder's lookups. It does not stop you checking a subagent's evidence or your own finished work.
 
 Rules: no abstractions nobody asked for. No scaffolding for later. Deletion over addition. Boring over clever. Fewest files. Shortest working diff, in the right place. Bug fixes hit the root cause — one fix in the shared function beats a guard in every caller.
 
