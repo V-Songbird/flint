@@ -121,7 +121,7 @@ The reply limit is gone. It was 6 lines. Now the reply has a fixed shape instead
 
 ## Does it work?
 
-These numbers were measured on the earlier 58-line style, flint commit 2503a06. The current style is not measured here yet.
+These numbers were measured on August 28, 2026, on the earlier 58-line style flint shipped that day in commit 73102a6. The current style is not measured here yet.
 
 24 sessions on Claude Opus 5, high effort. Four real jobs, two runs each, three setups. All of them ran together, so the numbers compare.
 
