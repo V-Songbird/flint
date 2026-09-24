@@ -113,13 +113,15 @@ Installed flint before? The style file changed. The old one is still here and st
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 58 lines. It was written from scratch for the newer models. In testing, those models followed the shorter file more closely.
+The current one is 84 lines. It was written from scratch for the newer models. In testing, those models followed the shorter file more closely.
 
-Three things it now asks for. The old one asked for none of them. Name the file you changed. Make it a link you can click. Say where things stand, not just what you did. End on the next move. Or say none is needed.
+Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say how you know, and what you did not check. End on one exact step you can take now.
 
-The reply limit went up. It was 6 lines. It is now 8. Those three things need room. A reply that cannot say what to open next just sends you back to ask.
+The reply limit is gone. It was 6 lines. Now the reply has a fixed shape instead. The result, why, how you know, what to do next. Those parts need room. A reply that cannot say what to open next just sends you back to ask.
 
 ## Does it work?
+
+These numbers were measured on the earlier 58-line style, flint commit 2503a06. The current style is not measured here yet.
 
 24 sessions on Claude Opus 5, high effort. Four real jobs, two runs each, three setups. All of them ran together, so the numbers compare.
 

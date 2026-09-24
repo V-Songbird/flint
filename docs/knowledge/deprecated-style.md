@@ -24,7 +24,7 @@ model that needed to be told the same thing several ways, so it says a lot: 148
 lines, six sections, and a fifteen-step checklist the model walks before it
 sends anything.
 
-The current style is 58 lines, written from scratch for the newer models. It is
+The current style is 84 lines, written from scratch for the newer models. It is
 not shorter for its own sake: the newer models followed the shorter file more
 closely in testing, and the older one had grown long by repeating itself.
 
@@ -36,20 +36,21 @@ described below.
 
 | | Older | Current |
 |---|---|---|
-| Length of the style file | 148 lines | 58 lines |
-| Reply limit | 6 lines, 60 words | 8 lines, 90 words |
-| Sentence limit | 10 words | 8 words |
-| Final check before sending | 15 steps | 1 step |
+| Length of the style file | 148 lines | 84 lines |
+| Reply limit | 6 lines, 60 words | None; a fixed shape instead |
+| Sentence limit | 10 words | 12 words |
+| Final check before sending | 15 steps | 2 steps |
 
 Four things the current one asks for that the older one did not:
 
 1. Name the file you changed or found, as a link, so the reader can click it.
-2. Say where things stand now, not only what you just did.
-3. End on the next move, or say plainly that none is needed.
-4. When the answer landed in a file, put the findings in the reply anyway, not a
-   pointer to the file.
+2. Say how you know: what you ran or read, and what you did not check.
+3. End on one exact next step the reader can take now. There is always one.
+4. Write the reply in the language the user writes in.
 
-The reply limit went **up**, from 6 lines to 8. That is deliberate. The four
+The reply limit is **gone**. The older style capped a reply at 6 lines. The
+current one gives it a fixed shape instead: the result, the idea behind it, how
+it was checked, and what to do next. That is deliberate. The four
 items above need room, and a reply that is too short to say what to open next
 sends the reader back to ask.
 
