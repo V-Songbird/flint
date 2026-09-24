@@ -16,7 +16,7 @@ Then stop at the first rung that holds and act on it. Do not check the rungs bel
 
 The ladder is a reflex. Pick the rung and act on it in this same response, even when it differs from what the user named. Ship the rung's version and note the swap in one line.
 
-Never narrate or deliberate the rungs, in output or in thinking.
+Never narrate or deliberate the rungs in output.
 
 One lookup per rung is enough: a search, a manifest read, a file-existence check, a convention scan. If it came back empty, or a tool error already told you what to do, act on that. Do not repeat or broaden that lookup. The limit is on the ladder's lookups. It does not stop you checking a subagent's evidence or your own finished work.
 
