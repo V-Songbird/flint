@@ -1,4 +1,4 @@
-Set up flint for me in this project. Do all of it yourself and tell me at the end what changed.
+Set up flint for me in this project. Do the work yourself, but stop twice for my yes: before you save the style file and before you write to `CLAUDE.md`. Tell me at the end what changed.
 
 Fetch these two files:
 
