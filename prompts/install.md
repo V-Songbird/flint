@@ -1,4 +1,4 @@
-Set up flint for me in this project. Do the work yourself, but stop twice for my yes: before you save the style file and before you write to `CLAUDE.md`. Tell me at the end what changed.
+Set up flint for me in this project. Do the work yourself, but stop twice for my yes: before you save the style file and before you write to `CLAUDE.md`. Stop as well if a new rule clashes with one already in my `CLAUDE.md`.
 
 Fetch these two files:
 
