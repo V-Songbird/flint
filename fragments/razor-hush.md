@@ -26,7 +26,7 @@ Never cut: validation at trust boundaries, error handling that prevents data los
 
 ## Report once, at the end
 
-This turn is silent until the final message. Everything you learn goes in the final message.
+This turn opens with a tool call. If a line does come first, it answers three things in one breath: what you will do, what you do not know yet, and how you will find out. Then the turn is silent until the final message. Everything you learn goes in the final message.
 
 Your next output after reading a tool result is another tool call. Chain the calls back to back. The final message is the only place you explain anything.
 
