@@ -81,7 +81,7 @@ Two plain text files. One goes in your home folder. One goes in your project.
 
 ### Let Claude do it
 
-Would rather not copy files around? Paste [`prompts/install.md`](prompts/install.md) into Claude Code. It sets itself up. It fetches both files. It puts each one where it belongs. It asks first if something is already there.
+Would rather not copy files around? Paste [`prompts/install.md`](prompts/install.md) into Claude Code. It sets itself up. It fetches both files. It puts each one where it belongs. It asks first if something is already there. It shows you the lines it adds to `CLAUDE.md` before it writes them.
 
 Prefer to do it yourself? The two steps are below.
 
@@ -143,7 +143,7 @@ Two runs per job, on one batch. Promising, not settled. An earlier batch on thes
 
 **[`prompts/tune-for-opus5.md`](prompts/tune-for-opus5.md)** is not a file to install. It is a message you paste into a Claude Code chat. Any project will do.
 
-It finds every instruction file the project loads. It grades each rule on one thing. Can Claude tell when to act on it? Then it rewrites the weak ones. It also checks every path and command a rule names. It flags lines written for older models: asking Claude to think harder, or to write out its reasoning. If no rule says when to keep going and when to stop and ask, it proposes one. You see each change before it lands. It hands you the git command that undoes the lot.
+It finds every instruction file the project loads. It grades each rule on one thing. Can Claude tell when to act on it? Then it rewrites the weak ones. It also checks every path and command a rule names. It flags lines written for older models: asking Claude to think harder, or to write out its reasoning. It flags three kinds of line Anthropic's Opus 5.5 system card warns about: orders never to ask, refuse or stop, rules about what goes in Claude's thinking, and trust handed to text from tool output. If no rule says when to keep going and when to stop and ask, it proposes one. You see each change before it lands. It hands you the git command that undoes the lot.
 
 Nothing to install for this either. Claude does it all with the tools it has.
 

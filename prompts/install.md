@@ -9,7 +9,7 @@ Then do four things.
 
 Save the first file, unchanged, to `.claude/output-styles/hush.md` inside my home folder. Create the folder if it is not there. If a file is already at that path, show me both versions and ask before replacing it.
 
-Add the second file's contents to the end of `CLAUDE.md` in this project. If there is no `CLAUDE.md`, create one holding just that. If any rule in it contradicts a rule already in my `CLAUDE.md`, stop and show me the pair rather than stacking both.
+Add the second file's contents to the end of `CLAUDE.md` in this project. If there is no `CLAUDE.md`, create one holding just that. If any rule in it contradicts a rule already in my `CLAUDE.md`, stop and show me the pair rather than stacking both. Before you write to `CLAUDE.md`, show me the change as a diff, every added line exactly as it will land, and write it only after I say yes.
 
 Check that `.claude/settings.json` in this project does not already pin a different output style. If it does, say which one and leave it alone.
 
