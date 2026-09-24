@@ -174,4 +174,4 @@ Flint is the stone you strike for a fire. These files are what you strike for a 
 
 MIT. See [LICENSE](LICENSE).
 
-The style and the rules come from hush and razor. Both are MIT. Both are by the same author. Both are copied here unchanged. One line was dropped. It only applies inside a plugin.
+The style and the rules come from hush and razor. Both are MIT. Both are by the same author. Both are copied here unchanged. Two parts of the style were left out. Both only work inside a plugin: the `force-for-plugin` setting and the paragraph about `[hush ...]` lines.

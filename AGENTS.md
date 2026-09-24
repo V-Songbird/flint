@@ -28,4 +28,4 @@ A README number comes only from a measured run. `CLAUDE.md` imports this file.
 ## Pitfalls
 
 - **The installer fetches from `main` by raw URL.** A rename under `output-styles/` or `fragments/` breaks `prompts/install.md` until that prompt is updated.
-- **The style and the fragment are copies of hush's voice and razor's checklist.** Change them here only to keep the copies faithful; one plugin-only line is deliberately dropped.
+- **The style and the fragment are copies of hush's voice and razor's checklist.** Change them here only to keep the copies faithful; two plugin-only parts are deliberately left out: the `force-for-plugin` frontmatter key and the `[hush ...]` paragraph.
