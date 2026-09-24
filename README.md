@@ -81,7 +81,7 @@ Two plain text files. One goes in your home folder. One goes in your project.
 
 ### Let Claude do it
 
-Would rather not copy files around? Paste [`prompts/install.md`](prompts/install.md) into Claude Code. It sets itself up. It fetches both files. It puts each one where it belongs. It asks first if something is already there. It shows you the lines it adds to `CLAUDE.md` before it writes them.
+Would rather not copy files around? Paste [`prompts/install.md`](prompts/install.md) into Claude Code. It sets itself up. It fetches both files. It puts each one where it belongs. It asks first if something is already there. It shows you the style file before it saves it. It shows you the lines it adds to `CLAUDE.md` before it writes them.
 
 Prefer to do it yourself? The two steps are below.
 
