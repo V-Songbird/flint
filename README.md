@@ -109,7 +109,7 @@ That file stays with the project. Anyone who works on it gets the same rules.
 
 ## The style was rewritten
 
-Installed flint before? The style file changed. The old one is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it.
+Installed flint before? The style file changed. The first one, 148 lines, is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it. The 58-line one that came next is not kept. Its last version is in the history: [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md).
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 

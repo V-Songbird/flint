@@ -28,6 +28,8 @@ The current style is 84 lines, written from scratch for the newer models. It is
 not shorter for its own sake: the newer models followed the shorter file more
 closely in testing, and the older one had grown long by repeating itself.
 
+Between the two, flint shipped a 58-line style. It is not kept as a file. Its last version is [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md).
+
 Both voices score about the same on the jobs we run. The current one writes a
 little more than the older one did and says more with it, which is the trade
 described below.
