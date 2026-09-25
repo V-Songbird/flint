@@ -20,7 +20,7 @@
     <a href="#tidy-up-the-rules-you-already-have">Fix your own rules</a>
 </p>
 
-> **TL;DR** — Ask Claude Code a small question. Back come 500 words of invented jargon. You still cannot tell what it did. Its own `Concise` setting cuts that by a third. You are no wiser. Drop two text files in place. The same answer comes back in 75 plain words. Claude will even do it for you. Nothing to install.
+> **TL;DR** — Ask Claude Code a small question. Back come 500 words of invented jargon. You still cannot tell what it did. Its own `Concise` setting cuts that by a third. You are no wiser. Drop two text files in place. The same answer came back in 75 plain words. Claude will even do it for you. Nothing to install. These numbers come from flint's earlier 58-line style. The current style is not measured yet.
 
 ---
 
@@ -59,7 +59,7 @@ None of it is wrong. It is a document. Pasted into a chat window. At four in the
 
 After 1155 words, it had not acted.
 
-**With the two files, 52 words.** Not one word of chatter while it worked.
+**With the two files, 52 words.** Not one word of chatter while it worked. That run used flint's earlier 58-line style. The current style has not run this job yet.
 
 > **Handoff written to `INCIDENT-2026-03-14-gateway-503.md`.**
 >
@@ -113,7 +113,7 @@ Installed flint before? The style file changed. The first one, 148 lines, is sti
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 84 lines. It was written from scratch for the newer models. In testing, those models followed the shorter file more closely.
+The current one is 84 lines. It was written from scratch for the newer models. In testing, those models followed the 58-line file more closely than the 148-line one. The 84-line file is not tested yet.
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say how you know, and what you did not check. End on one exact step you can take now.
 
@@ -121,7 +121,7 @@ The reply limit is gone. It was 6 lines. Now the reply has a fixed shape instead
 
 ## Does it work?
 
-These numbers were measured on August 28, 2026, on the earlier 58-line style flint shipped that day in commit 73102a6. The current style is not measured here yet.
+These numbers were measured on August 28, 2026, on the earlier 58-line style flint shipped that day in commit 73102a6. The current 84-line style is not measured yet.
 
 24 sessions on Claude Opus 5, high effort. Four real jobs, two runs each, three setups. All of them ran together, so the numbers compare.
 

@@ -25,14 +25,15 @@ lines, six sections, and a fifteen-step checklist the model walks before it
 sends anything.
 
 The current style is 84 lines, written from scratch for the newer models. It is
-not shorter for its own sake: the newer models followed the shorter file more
-closely in testing, and the older one had grown long by repeating itself.
+not shorter for its own sake: in testing, the newer models followed the 58-line
+style below more closely than this 148-line one, and the older one had grown long
+by repeating itself. The 84-line style has not been tested that way yet.
 
 Between the two, flint shipped a 58-line style. It is not kept as a file. Its last version is [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md).
 
-Both voices score about the same on the jobs we run. The current one writes a
-little more than the older one did and says more with it, which is the trade
-described below.
+The 148-line and 58-line styles score about the same on the jobs we run. The
+58-line one writes a little more than the 148-line one did and says more with it.
+The 84-line style is not measured yet.
 
 ## What actually changed
 
@@ -59,7 +60,8 @@ sends the reader back to ask.
 ## How the older numbers were measured
 
 These are the numbers this style earned, kept here because the README now
-carries the current one's.
+carries the 58-line style's. Neither table is for the current 84-line style,
+which is not measured yet.
 
 24 sessions on Claude Opus 5, high effort. Four jobs, two runs each, three
 setups, all run together so the numbers compare.
