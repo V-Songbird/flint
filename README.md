@@ -113,7 +113,7 @@ Installed flint before? The style file changed. The first one, 148 lines, is sti
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 84 lines. It was written from scratch for the newer models. In testing, those models followed the 58-line file more closely than the 148-line one. The 84-line file is not tested yet.
+The current one is 84 lines. It is a copy of hush's newest voice. In testing, the newer models followed the 58-line file more closely than the 148-line one. The 84-line file is not tested yet.
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say how you know, and what you did not check. End on one exact step you can take now.
 
