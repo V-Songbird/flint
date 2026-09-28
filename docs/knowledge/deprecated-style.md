@@ -43,6 +43,7 @@ The 84-line style is not measured yet.
 | Length of the style file | 148 lines | 84 lines |
 | Reply limit | 6 lines, 60 words | None; a fixed shape instead |
 | Sentence limit | 10 words | 12 words |
+| Block limit | None | 40 words |
 | Final check before sending | 15 steps | 3 steps |
 
 Four things the current one asks for that the older one did not:
