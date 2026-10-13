@@ -15,12 +15,12 @@
 <p align="center">
     <a href="#the-fix"><strong>Install it</strong></a> &nbsp;·&nbsp;
     <a href="#what-the-difference-looks-like">See the difference</a> &nbsp;·&nbsp;
-    <a href="#does-it-work">The numbers</a> &nbsp;·&nbsp;
+    <a href="#what-is-not-measured">What is not measured</a> &nbsp;·&nbsp;
     <a href="#the-style-was-rewritten">What changed</a> &nbsp;·&nbsp;
     <a href="#tidy-up-the-rules-you-already-have">Fix your own rules</a>
 </p>
 
-> **TL;DR** — Ask Claude Code a small question. Back come 500 words of invented jargon. You still cannot tell what it did. Its own `Concise` setting cuts that by a third. You are no wiser. Drop two text files in place. The same answer came back in 75 plain words. Claude will even do it for you. Nothing to install. These numbers come from flint's earlier 58-line style. The current style is not measured yet.
+> **TL;DR** — Ask Claude Code a small question. Back comes a wall of invented jargon. You still cannot tell what it did. Drop two text files in place. They ask Claude to answer in plain words. Claude will even do it for you. Nothing to install.
 
 ---
 
@@ -38,7 +38,7 @@ Here is one real job. Four questions about a gateway outage. The last one was th
 
 > Write me the on-call handoff: root cause, the impact window, and which deploy to roll back.
 
-**Plain Claude Code wrote 1155 words.** That is 115 lines. Ten headings, three tables, two blocks of code:
+**Plain Claude Code wrote a whole document.** Many headings, several tables, blocks of code. Its outline:
 
 ```
 # On-Call Handoff — Gateway 503s
@@ -57,9 +57,9 @@ None of it is wrong. It is a document. Pasted into a chat window. At four in the
 
 > Want me to save this as a markdown file in the working directory?
 
-After 1155 words, it had not acted.
+After all that text, it had not acted.
 
-**With the two files, 52 words.** Not one word of chatter while it worked. That run used flint's earlier 58-line style. The current style has not run this job yet.
+**With the two files, a short reply.** This one was written under flint's earlier 58-line style. It shows the shape of the reply, not the current style's output.
 
 > **Handoff written to `INCIDENT-2026-03-14-gateway-503.md`.**
 >
@@ -72,8 +72,6 @@ After 1155 words, it had not acted.
 In the real reply that name is a link. You can click it.
 
 It wrote the file. Then it said where. The cause is there. So is the window. So is the deploy to roll back. The long version's detail is not lost either. It is in the file. Ready when you want it.
-
-Both runs got the right answer. A script checks that. Mangle the facts and the run fails.
 
 ## The fix
 
@@ -113,33 +111,17 @@ Installed flint before? The style file changed. The first one, 148 lines, is sti
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 84 lines. It is a copy of hush's newest voice. In testing, the newer models followed the 58-line file more closely than the 148-line one. The 84-line file is not tested yet.
+The current one is 84 lines. It is a copy of hush's newest voice.
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say how you know, and what you did not check. End on one exact step you can take now.
 
 The reply limit is gone. It was 6 lines. Now the reply has a fixed shape instead. The result, why, how you know, what to do next. Those parts need room. A reply that cannot say what to open next just sends you back to ask.
 
-## Does it work?
+## What is not measured
 
-These numbers were measured on August 28, 2026, on the earlier 58-line style flint shipped that day in commit 73102a6. The current 84-line style is not measured yet.
-
-24 sessions on Claude Opus 5, high effort. Four real jobs, two runs each, three setups. All of them ran together, so the numbers compare.
-
-| Setup | Words in the reply | Chatter while working |
-|---|---|---|
-| Claude Code on its own | 530 | 37 words |
-| Its own built-in `Concise` style | 344 | 9 words |
-| **With both files** | **75** | **4 words** |
-
-`Concise` cuts the reply by about a third. These two files cut it by 86%. Same jobs. All 24 sessions got the right answer.
-
-Three honest caveats.
-
-Cost did not move much. flint came out 23% under plain Claude here. Earlier runs went both ways by a similar margin. Treat it as a wash for now.
+The current style is not measured. flint makes no claim about how much shorter or cheaper the replies are. Try it on your own work and judge the replies yourself.
 
 Text files cannot reach into build and test output. Long command output still goes through untrimmed.
-
-Two runs per job, on one batch. Promising, not settled. An earlier batch on these jobs read very differently. It put `Concise` much closer to plain Claude. That is how far a few runs can move.
 
 ## Tidy up the rules you already have
 

@@ -16,9 +16,7 @@ A new file has a high bar. Every line in `fragments/razor-hush.md` is loaded int
 
 ## Changing the fragment
 
-The fragment is measured, not guessed. If your change makes the fragment longer or changes what a rule asks for, say in the pull request how you know it helps.
-
-The harness that produced the README's table is kept outside this repository and is not distributed with flint. It runs headless sessions in isolated workspaces and checks each one against a known right answer.
+If your change makes the fragment longer or changes what a rule asks for, say in the pull request how you know it helps.
 
 A change that only shortens wording, fixes a typo, or repairs a dead link needs no measurement.
 
