@@ -6,7 +6,7 @@ This repository is a Foundry submodule outside both marketplace catalogs.
 
 ## Start here
 
-- Before changing either file, read [CONTRIBUTING.md](CONTRIBUTING.md): the fragment is measured, and a longer rule needs evidence.
+- Before changing either file, read [CONTRIBUTING.md](CONTRIBUTING.md): the fragment loads into every session, so a longer rule needs a stated reason for how you know it helps.
 - Before touching the older style, read [the older Hush voice](docs/knowledge/deprecated-style.md).
 
 ## Where things live
@@ -23,7 +23,7 @@ This repository is a Foundry submodule outside both marketplace catalogs.
 
 Rules are written for a model reading them cold: name the moment the rule fires, then the
 action, and pair every prohibition with what to do instead. Short sentences, everyday words.
-A README number comes only from a measured run. `CLAUDE.md` imports this file.
+The README carries no measured figures; a number goes in only after a real measured run. `CLAUDE.md` imports this file.
 
 ## Pitfalls
 
