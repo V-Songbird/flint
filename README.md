@@ -97,6 +97,8 @@ Claude Code reads a file that sets its voice. **[`output-styles/hush.md`](output
 
 Pick **Hush** from the list. That is it.
 
+Parts of the style, such as file cards, task lists and widgets, are written for the Claude desktop app. In a plain terminal Claude has no such tools. The style then tells it to use links and plain sentences instead.
+
 ### 2. Make it write less code
 
 Claude reads `CLAUDE.md` at every start. It follows whatever is in it. **[`fragments/razor-hush.md`](fragments/razor-hush.md)** asks two things of it. Check whether the code is needed at all. Reuse what your project already has.
@@ -111,7 +113,7 @@ Installed flint before? The style file changed. The first one, 148 lines, is sti
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 230 lines. It is a copy of the voice in hush 2.4.0, at commit `f561f1e`.
+The current one is 228 lines. It is a copy of the voice in hush 2.4.0, at commit `f561f1e`.
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say what you did not check. End on one exact step you can take now.
 
@@ -156,4 +158,4 @@ Flint is the stone you strike for a fire. These files are what you strike for a 
 
 MIT. See [LICENSE](LICENSE).
 
-The style and the rules come from hush and razor. Both are MIT. Both are by the same author. The style is copied here from hush 2.4.0, commit `f561f1e`, unchanged except for two parts. Both only work inside a plugin: the `force-for-plugin` setting and the paragraph about `[hush ...]` lines. The rules are adapted to work without either plugin.
+The style and the rules come from hush and razor. Both are MIT. Both are by the same author. The style is copied here from hush 2.4.0, commit `f561f1e`, unchanged except for three parts. All three only work inside a plugin: the `force-for-plugin` setting, the paragraph about `[hush ...]` lines and the paragraph about the `/hush:config` command and its "hush settings" reminder. The rules are adapted to work without either plugin.

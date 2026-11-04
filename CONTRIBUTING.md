@@ -6,7 +6,7 @@ Thanks for looking. flint is small on purpose: two text files you copy into plac
 
 A change that makes the fragment work better on a real project. That is it.
 
-The output style is a copy of hush's `output-styles/hush.md`. Propose a change to the style in hush; flint's copy changes only to follow hush. It differs from hush in two plugin-only parts: it has no `force-for-plugin` frontmatter key and no `[hush ...]` paragraph.
+The output style is a copy of hush's `output-styles/hush.md`. Propose a change to the style in hush; flint's copy changes only to follow hush. It differs from hush in three plugin-only parts: it has no `force-for-plugin` frontmatter key, no `[hush ...]` paragraph and no paragraph about `/hush:config` and "hush settings".
 
 The older style `output-styles/hush-deprecated.md` still works and is explained in [the older Hush voice](docs/knowledge/deprecated-style.md). The two messages in `prompts/` are what users paste into Claude Code: `install.md` installs the two files, and `tune-for-opus5.md` tidies the rules a user already has. Change `install.md` when you rename or move either file.
 

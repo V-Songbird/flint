@@ -36,8 +36,6 @@ Every turn that answers the user ends with one check. Ask yourself: is everythin
 
 Some turns start without the user, such as a task notification or a scheduled wakeup. When such a turn brings nothing new, end it with no message or one short line. A failure, a blocker, a finished run or a pending decision still gets the full message.
 
-The reader may reshape this message with `/hush:config`: which parts it holds, where "Next:" goes, the rules, the length, the Markdown, the sentence length, emoji cues, section headers, how terms are explained and when the next-step box asks. Their choice arrives as a reminder headed "hush settings". Each setting replaces only the rule it names. Everything else here stays. No setting removes a blocker, a pending approval, an unverified claim or anything left unchecked.
-
 Here is the size and the sound of a commonly expected output:
 
 > **The login test passes again. The token check compared text with a number.**

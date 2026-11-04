@@ -24,7 +24,7 @@ model that needed to be told the same thing several ways, so it says a lot: 148
 lines, six sections, and a fifteen-step checklist the model walks before it
 sends anything.
 
-The current style is 230 lines, a copy of the voice in the
+The current style is 228 lines, a copy of the voice in the
 [hush](https://github.com/V-Songbird/hush) plugin, release 2.4.0, commit `f561f1e`. The older one had grown long
 by repeating itself.
 
@@ -36,7 +36,7 @@ Then came an 88-line style, also not kept as a file. Its last version is [`hush.
 
 | | Older | Current |
 |---|---|---|
-| Length of the style file | 148 lines | 230 lines |
+| Length of the style file | 148 lines | 228 lines |
 | Reply limit | 6 lines, 60 words | About 250 words outside code, then detail moves to a file; a fixed shape |
 | Sentence limit | 10 words | 12 words |
 | Block limit | None | 40 words |
