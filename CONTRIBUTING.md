@@ -1,10 +1,12 @@
 # Contributing
 
-Thanks for looking. flint is small on purpose: two text files, no code, no install step.
+Thanks for looking. flint is small on purpose: two text files you copy into place, no code, no install step. The two files are the output style `output-styles/hush.md` and the `CLAUDE.md` fragment `fragments/razor-hush.md`.
 
 ## What belongs here
 
-A change that makes one of the two files work better on a real project. That is it.
+A change that makes the output style or the fragment work better on a real project. That is it.
+
+The older style `output-styles/hush-deprecated.md` still works and is explained in [the older Hush voice](docs/knowledge/deprecated-style.md). The two messages in `prompts/` are what users paste into Claude Code: `install.md` installs the two files, and `tune-for-opus5.md` tidies the rules a user already has. Change `install.md` when you rename or move either file.
 
 A new file has a high bar. Every line in `fragments/razor-hush.md` is loaded into every session in every project that uses it, so a line has to earn its place against that cost. If a rule only matters to one language or one framework, it does not belong in the shared fragment.
 
