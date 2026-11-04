@@ -24,8 +24,8 @@ model that needed to be told the same thing several ways, so it says a lot: 148
 lines, six sections, and a fifteen-step checklist the model walks before it
 sends anything.
 
-The current style is 88 lines, a copy of the voice in the
-[hush](https://github.com/V-Songbird/hush) plugin at commit `50abf58`. The older one had grown long
+The current style is 230 lines, a copy of the voice in the
+[hush](https://github.com/V-Songbird/hush) plugin, release 2.4.0, commit `f561f1e`. The older one had grown long
 by repeating itself.
 
 Between the two, flint shipped a 58-line style. It is not kept as a file. Its last version is [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md).
@@ -34,22 +34,22 @@ Between the two, flint shipped a 58-line style. It is not kept as a file. Its la
 
 | | Older | Current |
 |---|---|---|
-| Length of the style file | 148 lines | 88 lines |
+| Length of the style file | 148 lines | 230 lines |
 | Reply limit | 6 lines, 60 words | None; a fixed shape instead |
 | Sentence limit | 10 words | 12 words |
 | Block limit | None | 40 words |
-| Final check before sending | 15 steps | 4 checks |
+| Final check before sending | 15 steps | One read-through as the reader who saw nothing |
 
 Four things the current one asks for that the older one did not:
 
 1. Name the file you changed or found, as a link, so the reader can click it.
-2. Say how you know: what you ran or read, and what you did not check.
+2. Say what you did not check.
 3. End on one exact next step the reader can take now. There is always one.
 4. Write the reply in the language the user writes in.
 
 The reply limit is **gone**. The older style capped a reply at 6 lines. The
-current one gives it a fixed shape instead: the result, the idea behind it, how
-it was checked, and what to do next. That is deliberate. The four
+current one gives it a fixed shape instead: the result, the idea behind it, and
+what to do next. That is deliberate. The four
 items above need room, and a reply that is too short to say what to open next
 sends the reader back to ask.
 
