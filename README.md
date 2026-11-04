@@ -107,7 +107,7 @@ That file stays with the project. Anyone who works on it gets the same rules.
 
 ## The style was rewritten
 
-Installed flint before? The style file changed. The first one, 148 lines, is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it. The 58-line one that came next is not kept. Its last version is in the history: [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md).
+Installed flint before? The style file changed. The first one, 148 lines, is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it. The 58-line one that came next is not kept. Its last version is in the history: [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md). The 88-line one that followed is not kept either: [`hush.md` at `a38be16`](https://github.com/V-Songbird/flint/blob/a38be16/output-styles/hush.md).
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
@@ -115,7 +115,7 @@ The current one is 230 lines. It is a copy of the voice in hush 2.4.0, at commit
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say what you did not check. End on one exact step you can take now.
 
-The reply limit is gone. It was 6 lines. Now the reply has a fixed shape instead. The result, the idea behind it, what to do next. Those parts need room. A reply that cannot say what to open next just sends you back to ask.
+The 6-line reply limit is replaced by a soft budget of 250 words outside code. Past that, detail moves to a file you can open. The reply also has a fixed shape: the result, the idea behind it, what to do next. Those parts need room. A reply that cannot say what to open next just sends you back to ask.
 
 ## What is not measured
 

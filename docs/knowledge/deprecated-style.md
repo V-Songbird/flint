@@ -30,15 +30,17 @@ by repeating itself.
 
 Between the two, flint shipped a 58-line style. It is not kept as a file. Its last version is [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md).
 
+Then came an 88-line style, also not kept as a file. Its last version is [`hush.md` at `a38be16`](https://github.com/V-Songbird/flint/blob/a38be16/output-styles/hush.md).
+
 ## What actually changed
 
 | | Older | Current |
 |---|---|---|
 | Length of the style file | 148 lines | 230 lines |
-| Reply limit | 6 lines, 60 words | None; a fixed shape instead |
+| Reply limit | 6 lines, 60 words | About 250 words outside code, then detail moves to a file; a fixed shape |
 | Sentence limit | 10 words | 12 words |
 | Block limit | None | 40 words |
-| Final check before sending | 15 steps | One read-through as the reader who saw nothing |
+| Final check before sending | 15 steps | One read-through as the reader who saw nothing, then about 15 to 20 questions: word count, risks and approvals, sentence and block length, labels, the next step, archive readiness, the box, shape, links, visual |
 
 Four things the current one asks for that the older one did not:
 
@@ -47,9 +49,10 @@ Four things the current one asks for that the older one did not:
 3. End on one exact next step the reader can take now. There is always one.
 4. Write the reply in the language the user writes in.
 
-The reply limit is **gone**. The older style capped a reply at 6 lines. The
-current one gives it a fixed shape instead: the result, the idea behind it, and
-what to do next. That is deliberate. The four
+The 6-line cap is **replaced**. The older style capped a reply at 6 lines. The
+current one sets a soft budget of 250 words outside code, with detail moved to a
+file past that, and gives the reply a fixed shape: the result, the idea behind
+it, and what to do next. That is deliberate. The four
 items above need room, and a reply that is too short to say what to open next
 sends the reader back to ask.
 
