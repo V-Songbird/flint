@@ -97,7 +97,7 @@ Claude Code reads a file that sets its voice. **[`output-styles/hush.md`](output
 
 Pick **Hush** from the list. That is it.
 
-Parts of the style, such as file cards, task lists and widgets, are written for the Claude desktop app. In a plain terminal Claude has no such tools. The style then tells it to use links and plain sentences instead.
+Parts of the style, such as file cards, app links and widgets, are written for the Claude desktop app. In a plain terminal Claude has no such tools. The style then tells it to use links and plain sentences instead.
 
 ### 2. Make it write less code
 
