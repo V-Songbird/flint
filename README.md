@@ -111,7 +111,7 @@ Installed flint before? The style file changed. The first one, 148 lines, is sti
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 84 lines. It is a copy of hush's newest voice.
+The current one is 88 lines. It is a copy of hush's voice at commit `50abf58`.
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say how you know, and what you did not check. End on one exact step you can take now.
 
@@ -156,4 +156,4 @@ Flint is the stone you strike for a fire. These files are what you strike for a 
 
 MIT. See [LICENSE](LICENSE).
 
-The style and the rules come from hush and razor. Both are MIT. Both are by the same author. The style is copied here unchanged, except for two parts. Both only work inside a plugin: the `force-for-plugin` setting and the paragraph about `[hush ...]` lines. The rules are adapted to work without either plugin.
+The style and the rules come from hush and razor. Both are MIT. Both are by the same author. The style is copied here from hush at commit `50abf58`, unchanged except for two parts. Both only work inside a plugin: the `force-for-plugin` setting and the paragraph about `[hush ...]` lines. The rules are adapted to work without either plugin.

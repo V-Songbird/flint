@@ -24,8 +24,8 @@ model that needed to be told the same thing several ways, so it says a lot: 148
 lines, six sections, and a fifteen-step checklist the model walks before it
 sends anything.
 
-The current style is 84 lines, a copy of the newest voice in the
-[hush](https://github.com/V-Songbird/hush) plugin. The older one had grown long
+The current style is 88 lines, a copy of the voice in the
+[hush](https://github.com/V-Songbird/hush) plugin at commit `50abf58`. The older one had grown long
 by repeating itself.
 
 Between the two, flint shipped a 58-line style. It is not kept as a file. Its last version is [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md).
@@ -34,11 +34,11 @@ Between the two, flint shipped a 58-line style. It is not kept as a file. Its la
 
 | | Older | Current |
 |---|---|---|
-| Length of the style file | 148 lines | 84 lines |
+| Length of the style file | 148 lines | 88 lines |
 | Reply limit | 6 lines, 60 words | None; a fixed shape instead |
 | Sentence limit | 10 words | 12 words |
 | Block limit | None | 40 words |
-| Final check before sending | 15 steps | 3 steps |
+| Final check before sending | 15 steps | 4 checks |
 
 Four things the current one asks for that the older one did not:
 
