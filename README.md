@@ -109,11 +109,11 @@ That file stays with the project. Anyone who works on it gets the same rules.
 
 ## The style was rewritten
 
-Installed flint before? The style file changed. The first one, 148 lines, is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it. The 58-line one that came next is not kept. Its last version is in the history: [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md). The 88-line one that followed is not kept either: [`hush.md` at `a38be16`](https://github.com/V-Songbird/flint/blob/a38be16/output-styles/hush.md). Nor is the 234-line one after it: [`hush.md` at `5e86488`](https://github.com/V-Songbird/flint/blob/5e86488/output-styles/hush.md).
+Installed flint before? The style file changed. The first one, 148 lines, is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it. The 58-line one that came next is not kept. Its last version is in the history: [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md). The 88-line one that followed is not kept either: [`hush.md` at `a38be16`](https://github.com/V-Songbird/flint/blob/a38be16/output-styles/hush.md). Nor is the 234-line one after it: [`hush.md` at `5e86488`](https://github.com/V-Songbird/flint/blob/5e86488/output-styles/hush.md). Nor is the 129-line one that asked for silence while working: [`hush.md` at `20822f7`](https://github.com/V-Songbird/flint/blob/20822f7/output-styles/hush.md).
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 129 lines. It is a copy of the voice in hush 2.6.6, at commit `41ebc35`. It no longer holds the forms only the Claude desktop app draws. The hush plugin sends those from a hook, and a text file has none.
+The current one is 115 lines. It is a copy of the voice in hush 2.7.0, at commit `d0a4dd5`. It no longer holds the forms only the Claude desktop app draws. The hush plugin sends those from a hook, and a text file has none.
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say what you did not check. End on one exact step you can take now.
 
@@ -147,7 +147,7 @@ Then install whichever you want.
 
 | Plugin | What it adds beyond the text |
 |---|---|
-| **[hush](https://github.com/V-Songbird/hush)** | Trims long command output before it fills the session. Nudges the quiet back when a session slips. This is the part a text file cannot do. The style here comes from it. |
+| **[hush](https://github.com/V-Songbird/hush)** | Trims long command output before it fills the session. This is the part a text file cannot do. The style here comes from it. |
 | **[razor](https://github.com/V-Songbird/razor)** | Stops the moment a package gets added. Asks once, with your existing packages in the message. Counts what a session added. |
 
 ## Why "flint"
@@ -158,4 +158,4 @@ Flint is the stone you strike for a fire. These files are what you strike for a 
 
 MIT. See [LICENSE](LICENSE).
 
-The style and the rules come from hush and razor. Both are MIT. Both are by the same author. The style is copied here from hush 2.6.6, commit `41ebc35`, unchanged except for four parts. All four only work inside a plugin: the `force-for-plugin` setting, the paragraph about `[hush ...]` lines, the paragraph about the `/hush:config` command and its "hush settings" reminder, and the two sentences that say a setting can move or remove the "Next:" line. The rules are adapted to work without either plugin.
+The style and the rules come from hush and razor. Both are MIT. Both are by the same author. The style is copied here from hush 2.7.0, commit `d0a4dd5`, unchanged except for four parts. All four only work inside a plugin: the `force-for-plugin` setting, the paragraph about `[hush ...]` lines, the paragraph about the `/hush:config` command and its "hush settings" reminder, and the two sentences that say a setting can move or remove the "Next:" line. The rules are adapted to work without either plugin.
