@@ -109,11 +109,11 @@ That file stays with the project. Anyone who works on it gets the same rules.
 
 ## The style was rewritten
 
-Installed flint before? The style file changed. The first one, 148 lines, is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it. The 58-line one that came next is not kept. Its last version is in the history: [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md). The 88-line one that followed is not kept either: [`hush.md` at `a38be16`](https://github.com/V-Songbird/flint/blob/a38be16/output-styles/hush.md). Nor is the 234-line one after it: [`hush.md` at `5e86488`](https://github.com/V-Songbird/flint/blob/5e86488/output-styles/hush.md). Nor is the 129-line one that asked for silence while working: [`hush.md` at `20822f7`](https://github.com/V-Songbird/flint/blob/20822f7/output-styles/hush.md).
+Installed flint before? The style file changed. The first one, 148 lines, is still here and still works. [The older Hush voice](docs/knowledge/deprecated-style.md) says how to keep it. The 58-line one that came next is not kept. Its last version is in the history: [`hush.md` at `2503a06`](https://github.com/V-Songbird/flint/blob/2503a06/output-styles/hush.md). The 88-line one that followed is not kept either: [`hush.md` at `a38be16`](https://github.com/V-Songbird/flint/blob/a38be16/output-styles/hush.md). Nor is the 234-line one after it: [`hush.md` at `5e86488`](https://github.com/V-Songbird/flint/blob/5e86488/output-styles/hush.md). Nor is the 129-line one that asked for silence while working: [`hush.md` at `20822f7`](https://github.com/V-Songbird/flint/blob/20822f7/output-styles/hush.md). Nor is the 115-line one from hush 2.7.0: [`hush.md` at `919b15a`](https://github.com/V-Songbird/flint/blob/919b15a/output-styles/hush.md).
 
 The old style was written for an older model. It repeated itself to make rules stick. It runs to 148 lines. It ends in a fifteen-step check.
 
-The current one is 115 lines. It is a copy of the voice in hush 2.7.0, at commit `d0a4dd5`. It no longer holds the forms only the Claude desktop app draws. The hush plugin sends those from a hook, and a text file has none.
+The current one is 81 lines. It is a copy of the voice in hush 2.8.0, at commit `bdc375c`. It no longer holds the forms only the Claude desktop app draws. The hush plugin sends those from a hook, and a text file has none.
 
 Three things it now asks for. The old one asked for none of them. Link every file you name, so you can click it. Say what you did not check. End on one exact step you can take now.
 
